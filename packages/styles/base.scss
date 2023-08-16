@@ -1,0 +1,21 @@
+@import './variable.scss';
+
+body {
+  color: var(--cenyu-color-text);
+  font-size: var(--cenyu-font-size-m);
+  font-family: var(--cenyu-font-family);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--cenyu-color-primary);
+  transition: opacity ease-in-out 0.2s;
+}
+
+a:active {
+  opacity: 0.8;
+}

@@ -1,0 +1,71 @@
+$class-prefix-tabs: 'cenyu-tabs';
+
+.#{$class-prefix-tabs} {
+  position: relative;
+  user-select: none;
+
+  &-tab-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &-card {
+      .#{$class-prefix-tabs}-tab-active {
+        background: var(--cenyu-color-primary);
+
+        .#{$class-prefix-tabs}-tab-title {
+          color: var(--cenyu-color-white);
+        }
+      }
+    }
+
+    &-card {
+      background-color: var(--cenyu-color-border);
+
+      .#{$class-prefix-tabs}-tab-title {
+        color: var(--cenyu-color-weak);
+      }
+    }
+  }
+
+  &-tab {
+    flex: auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    &-title {
+      margin: auto;
+      font-size: var(--cenyu-font-size-m);
+      white-space: nowrap;
+      width: min-content;
+      position: relative;
+      padding: 8px 0 10px;
+    }
+
+    &-active {
+      .#{$class-prefix-tabs}-tab-title {
+        color: var(--cenyu-color-primary);
+      }
+    }
+  }
+
+  &-tab-line {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: var(--cenyu-color-primary);
+    border-radius: 2px;
+  }
+
+  &-content {
+    padding: var(--cenyu-padding-m);
+  }
+}
